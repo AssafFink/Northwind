@@ -1,0 +1,9 @@
+div {
+    border: 1px solid black;
+    padding: 3px;
+    display: inline-block;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: small;
+}

@@ -1,0 +1,21 @@
+<div>
+
+    <form [formGroup]="userForm" (submit)="send()">
+
+        <label>First Name: </label>
+        <input type="text" formControlName="firstNameControl">
+
+        <label>Last Name: </label>
+        <input type="text" formControlName="lastNameControl">
+
+        <label>Email: </label>
+        <input type="email" formControlName="emailControl">
+
+        <label>Password: </label>
+        <input type="password" formControlName="passwordControl">
+
+        <button [disabled]="userForm.invalid">Register</button>
+
+    </form>
+
+</div>

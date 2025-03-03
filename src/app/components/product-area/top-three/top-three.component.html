@@ -1,0 +1,26 @@
+<div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (p of products; track p.id) {
+            <tr (click)="displayDetails(p.id)">
+                <td>{{p.name}}</td>
+                <td>{{p.price | currency:"ILS"}}</td>
+                <td>{{p.stock}}</td>
+                <td>
+                    <img [src]="p.imageUrl">
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

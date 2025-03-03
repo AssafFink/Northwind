@@ -1,0 +1,26 @@
+mat-form-field {
+    width: 100%;
+}
+
+mat-checkbox {
+    margin-bottom: 20px;
+}
+
+form {
+    width: 400px;
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+}
+
+button {
+    flex: 1;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+button:last-child {
+    margin-right: 0;
+}

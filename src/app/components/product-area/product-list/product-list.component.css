@@ -1,0 +1,57 @@
+/* Table Styling */
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #2e3a59; /* Darker text color for contrast */
+    border-bottom: 1px solid #cce7ff; /* Soft border for each row */
+}
+
+/* Header Styling */
+th {
+    background-color: #6fc3e9; /* Sea blue color */
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Row Styling */
+tbody tr {
+    background-color: #e0f7ff; /* Light blue rows */
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background-color: #b2ebf2; /* Light cyan on hover */
+}
+
+/* Image Styling */
+td img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ensure image is well-cropped */
+    border-radius: 50%; /* Circular image for a more stylish look */
+    border: 3px solid #4fa3d1; /* Matching border color */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Add some spacing between rows */
+tbody tr td {
+    padding: 16px;
+}
+
+/* Border Radius for the entire table */
+table {
+    border-radius: 15px;
+}
+

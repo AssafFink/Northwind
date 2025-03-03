@@ -1,0 +1,15 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.active {
+    color: green;
+    font-weight: bold;
+    font-family: 'Lucida Handwriting';
+    text-decoration: none;
+    font-size: x-large;
+    text-shadow: 2px 2px 2px black;
+}

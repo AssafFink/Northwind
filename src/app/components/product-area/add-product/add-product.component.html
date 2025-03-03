@@ -1,0 +1,33 @@
+<div>
+
+    <p>(Template Form)</p>
+
+    <!-- ngNativeValidate enables native html validation like required, minlength etc. -->
+    <form (submit)="send(productForm.valid)" #productForm="ngForm">
+
+        <label>Name: </label>
+        <input type="text" name="name" [(ngModel)]="product.name" #nameControl="ngModel" required minlength="2" maxlength="50">
+        <span *ngIf="nameControl.errors?.['required'] && nameControl.touched">Missing name.</span>
+        <span *ngIf="nameControl.errors?.['minlength'] && nameControl.touched">Name too short.</span>
+        <span *ngIf="nameControl.errors?.['maxlength'] && nameControl.touched">Name too long.</span>
+
+        <label>Price: </label>
+        <input type="number" name="price" step="0.01" [(ngModel)]="product.price" #priceControl="ngModel" required min="0" max="1000">
+        <span *ngIf="priceControl.errors?.['required'] && priceControl.touched">Missing price.</span>
+        <span *ngIf="priceControl.errors?.['min'] && priceControl.touched">Price can't be negative.</span>
+        <span *ngIf="priceControl.errors?.['max'] && priceControl.touched">Price can't exceed 1000.</span>
+
+        <label>Stock: </label>
+        <input type="number" name="stock" [(ngModel)]="product.stock" #stockControl="ngModel" required min="0" max="1000">
+        <span *ngIf="stockControl.errors?.['required'] && stockControl.touched">Missing stock.</span>
+        <span *ngIf="stockControl.errors?.['min'] && stockControl.touched">Stock can't be negative.</span>
+        <span *ngIf="stockControl.errors?.['max'] && stockControl.touched">Stock can't exceed 1000.</span>
+
+        <label>Image:</label>
+        <input type="file" accept="image/*" name="image" #productImage (ngModel)="product.image" #imageControl="ngModel" required (cancel)="dialogCanceled()">
+        <span *ngIf="imageControl.errors?.['required'] && canceled">Missing image.</span>
+        <button>Add</button>
+
+    </form>
+
+</div>

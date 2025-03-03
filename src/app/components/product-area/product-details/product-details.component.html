@@ -1,0 +1,22 @@
+<div *ngIf="product">
+
+    <h3>Name: {{product.name}}</h3>
+    
+    <h3>Price: {{product.price | currency}}</h3>
+    
+    <h3>Stock: {{product.stock}}</h3>
+    
+    <img [src]="product.imageUrl">
+    <br><br>
+
+    <a routerLink="/products">Back</a>
+    
+    <span> | </span>
+    
+    <a routerLink="/products/edit/{{product.id}}">Edit</a>
+    
+    <span> | </span>
+
+    <a href="javascript:void(0)" (click)="deleteMe(product.id)">Delete</a>
+    
+</div>
